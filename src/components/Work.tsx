@@ -2,9 +2,9 @@ import "./styles/Work.css";
 import WorkImage from "./WorkImage";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useGSAP } from 'gsap/React';
+import { useEffect } from "react";
 
-gsap.registerPlugin(useGSAP);
+gsap.registerPlugin(ScrollTrigger);
 
 const projects = [
   {
@@ -46,7 +46,7 @@ const projects = [
 ];
 
 const Work = () => {
-  useGSAP(() => {
+  useEffect(() => {
   let translateX: number = 0;
 
   function setTranslateX() {
